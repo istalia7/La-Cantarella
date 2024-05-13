@@ -1,0 +1,52 @@
+<header>
+  <div class="flex h-20 bg-white">
+    <div class="relative w-72 text-center self-center">
+      <p class="text-3xl font-bold">La Cantarella</p>
+      Un choeur en mouvement
+    </div>
+    <div class="flex w-full">
+      <ul class="flex items-center justify-between w-full pl-8 pr-16">
+        <li>
+          <a class="text-blue-500" href="{{ path('app_a-propos') }}"
+            >Qui sommes-nous?</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-500" href="{{ path('app_la-cantarella') }}"
+            >La Cantarella</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-500" href="../">Actus et Concerts</a>
+        </li>
+        <li>
+          <a class="text-blue-500" href="{{ path('app_repertoire') }}"
+            >Répertoire</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-500" href="{{ path('app_partenaires') }}"
+            >La Cantarella aime</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-500" href="{{ path('app_contact') }}"
+            >Nous contacter</a
+          >
+        </li>
+        <li>
+          <a class="text-blue-500" href="{{ path('app_login') }}">Connexion</a>
+        </li>
+        {% if app.user %}
+        <li>
+          <a class="text-blue-500" href="{{ path('app_logout') }}"
+            >Se déconnecter</a
+          >
+        </li>
+        {% endif %} {% if is_granted('ROLE_ADMIN') %}
+        <a class="text-blue-500" href="{{ path('admin') }}">Admin</a>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</header>
