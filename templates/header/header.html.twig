@@ -1,3 +1,4 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <header>
   <div class="flex h-20 bg-white">
     <div class="relative w-72 text-center self-center">
@@ -7,45 +8,65 @@
     <div class="flex w-full">
       <ul class="flex items-center justify-between w-full pl-8 pr-16">
         <li>
+          <a class="text-blue-500" href="{{ path('app_home') }}">Accueil</a>
+        </li>
+        <li>
           <a class="text-blue-500" href="{{ path('app_a-propos') }}"
-            >Qui sommes-nous?</a
+            >L'association</a
           >
         </li>
         <li>
-          <a class="text-blue-500" href="{{ path('app_la-cantarella') }}"
-            >La Cantarella</a
+          <a class="text-blue-500" href="{{ path('app_evenements') }}"
+            >Évenements</a
           >
         </li>
         <li>
-          <a class="text-blue-500" href="../">Actus et Concerts</a>
-        </li>
-        <li>
-          <a class="text-blue-500" href="{{ path('app_repertoire') }}"
-            >Répertoire</a
+          <a class="text-blue-500" href="{{ path('app_nostalgie') }}"
+            >Nostalgie</a
           >
         </li>
-        <li>
-          <a class="text-blue-500" href="{{ path('app_partenaires') }}"
-            >La Cantarella aime</a
-          >
-        </li>
+        {#
         <li>
           <a class="text-blue-500" href="{{ path('app_contact') }}"
             >Nous contacter</a
           >
         </li>
-        <li>
-          <a class="text-blue-500" href="{{ path('app_login') }}">Connexion</a>
-        </li>
-        {% if app.user %}
-        <li>
-          <a class="text-blue-500" href="{{ path('app_logout') }}"
-            >Se déconnecter</a
+        #}
+          <li
+            data-dropdown-toggle="dropdown"
+            class="text-blue-500 hover:cursor-pointer"
           >
-        </li>
-        {% endif %} {% if is_granted('ROLE_ADMIN') %}
-        <a class="text-blue-500" href="{{ path('admin') }}">Admin</a>
-        {% endif %}
+            Utilisateur
+          </li>
+          <div
+            id="dropdown"
+            class="hidden divide-y divide-black bg-gray-600 border rounded-lg w-44"
+          >
+          <ul class="py-2 flex flex-col items-center">
+            <li>
+              <a
+                class="text-blue-500 hover:bg-gray-500"
+                href="{{ path('app_login') }}"
+                >Connexion</a
+              >
+            </li>
+            {% if app.user %}
+            <li>
+              <a
+                class="text-blue-500 hover:bg-gray-500"
+                href="{{ path('app_logout') }}"
+                >Se déconnecter</a
+              >
+            </li>
+            {% endif %} {% if is_granted('ROLE_ADMIN') %}
+            <a
+              class="text-blue-500 hover:bg-gray-500"
+              href="{{ path('admin') }}"
+              >Admin</a
+            >
+            {% endif %}
+          </div>
+        </ul>
       </ul>
     </div>
   </div>

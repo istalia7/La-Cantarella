@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class RepertoireController extends AbstractController
+class MentionController extends AbstractController
 {
-    #[Route('/repertoire', name: 'app_repertoire')]
+    #[Route('/mention', name: 'app_mention')]
     public function index(): Response
     {
-        return $this->render('repertoire/index.html.twig', [
-            'controller_name' => 'RepertoireController',
+        return $this->render('mention/index.html.twig', [
+            'controller_name' => 'MentionController',
         ]);
     }
 }
