@@ -24,7 +24,7 @@ class ArticleCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('titre'),
-            TextField::new('resume'),
+            TextEditorField::new('resume'),
             ImageField::new('image')
                 ->setBasePath('images/article')
                 ->setUploadDir('public/images/article')

@@ -19,7 +19,7 @@ body %} {% include "header/header.html.twig" %} {% if app.user %}
     <div class="p-5">
       <img class="rounded-t-lg" src="{{ vich_uploader_asset(article) }}" />
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        {{ article.resume }}
+        {{ article.resume | raw }}
       </p>
     </div>
   </div>
