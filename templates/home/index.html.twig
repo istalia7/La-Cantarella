@@ -1,6 +1,26 @@
 {% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block
 body %} {% include "header/header.html.twig" %}
-<div class="bg-white ml-20 mt-20 w-2/3">
-  <p>Accueil</p>
+
+
+
+<div class="slider relative w-full m-auto overflow-hidden">
+  <div class="slides flex justify-center">
+    <img
+      class="slide"
+      src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+    />
+    <img
+      class="slide"
+      src="{{ asset('build/images/Facebook_logo.7ef2feb8.png') }}"
+    />
+    <img
+      class="slide"
+      src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+    />
+  </div>
+  <button id="prev" class="prev">&#10094</button>
+  <button id="next" class="next">&#10095</button>
 </div>
+
+
 {% include "footer/footer.html.twig" %} {% endblock %}
