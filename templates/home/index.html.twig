@@ -1,26 +1,25 @@
 {% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block
 body %} {% include "header/header.html.twig" %}
 
-
-
-<div class="slider relative w-full m-auto overflow-hidden">
+<div class="bg-logo">
+<div class="slider relative w-1/2 m-auto overflow-hidden">
   <div class="slides flex justify-center">
     <img
       class="slide"
-      src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+      src="{{ asset('build/images/22050901_10155101113555885_3046640990628493773_o.69c15f73.jpg') }}"
     />
     <img
       class="slide"
-      src="{{ asset('build/images/Facebook_logo.7ef2feb8.png') }}"
+      src="{{ asset('build/images/ADL_17-07-04_orgue_et_chorale_24.2df303b6.jpg') }}"
     />
     <img
       class="slide"
-      src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+      src="{{ asset('build/images/276108191_10159798178344738_8159716240078307338_n.9c8dd4d4.jpg') }}"
     />
   </div>
   <button id="prev" class="prev">&#10094</button>
   <button id="next" class="next">&#10095</button>
 </div>
-
+</div>
 
 {% include "footer/footer.html.twig" %} {% endblock %}

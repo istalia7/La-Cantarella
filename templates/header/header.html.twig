@@ -1,62 +1,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <header>
-  <div class="flex h-20 bg-white">
-    <div class="relative w-72 text-center self-center">
-      <p class="text-3xl font-bold">La Cantarella</p>
-      Un choeur en mouvement
+  <div class="flex h-20 bg-[#15B6B8]">
+    <div class="relative w-48 text-center self-center">
+      <a href="{{ path('app_home') }}"><img class="h-20" src="{{ asset('build/images/cantarella logo.89e2d3ab.jpg') }}"></a>
     </div>
     <div class="flex w-full">
       <ul class="flex items-center justify-between w-full pl-8 pr-16">
         <li>
-          <a class="text-blue-500" href="{{ path('app_home') }}">Accueil</a>
+          <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_home') }}">Accueil</a>
         </li>
         <li>
-          <a class="text-blue-500" href="{{ path('app_a-propos') }}"
+          <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_a-propos') }}"
             >L'association</a
           >
         </li>
         <li>
-          <a class="text-blue-500" href="{{ path('app_evenements') }}"
+          <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_evenements') }}"
             >Évenements</a
           >
         </li>
         <li>
-          <a class="text-blue-500" href="{{ path('app_nostalgie') }}"
+          <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_nostalgie') }}"
             >Nostalgie</a
           >
         </li>
           <li
             data-dropdown-toggle="dropdown"
-            class="text-blue-500 hover:cursor-pointer"
+            class="text-white hover:cursor-pointer hover:text-[#A1E2E3]"
           >
             Utilisateur
           </li>
           <div
             id="dropdown"
-            class="hidden divide-y divide-black bg-gray-600 border rounded-lg w-44"
+            class="hidden divide-black bg-[#15B6B8] border rounded-lg w-44"
           >
-          <ul class="py-2 flex flex-col items-center">
+          <ul class="py-2 divide-y flex flex-col items-center">
             <li>
               <a
-                class="text-blue-500 hover:bg-gray-500"
+                class="text-white hover:text-[#A1E2E3]"
                 href="{{ path('app_login') }}"
                 >Connexion</a
               >
             </li>        
             <li>
-              <a class="text-blue-500 hover:bg-gray-500" href="{{ path('app_register') }}">Inscription</a>
+              <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_register') }}">Inscription</a>
             </li>
             {% if app.user %}
             <li>
               <a
-                class="text-blue-500 hover:bg-gray-500"
+                class="text-white hover:text-[#A1E2E3]"
                 href="{{ path('app_logout') }}"
                 >Se déconnecter</a
               >
             </li>
             {% endif %} {% if is_granted('ROLE_ADMIN') %}
             <a
-              class="text-blue-500 hover:bg-gray-500"
+              class="text-white hover:text-[#A1E2E3]"
               href="{{ path('admin') }}"
               >Admin</a
             >

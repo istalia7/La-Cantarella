@@ -1,28 +1,38 @@
 {% extends 'base.html.twig' %} {% block title %}Nous Contacter{% endblock %} {%
 block body %} {% include "header/header.html.twig" %}
-<div class="mt-12 ml-12">
-  <h2 class="font-bold pb-8">Nous Contacter</h2>
-  <p>
-    N'hésitez pas à nous contacter via notre adresse email ! <br />
-    Vous pouvez aussi nous retrouver sur les réseaux sociaux.
-  </p>
-  <div class="pt-4 flex items-center">
-    <a
-      href="https://www.youtube.com/channel/UCtHn2Qg_p7c68ktYtJiVPIA"
-      target="_blank"
-      ><img
-        class="w-8 mr-4"
-        src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
-        alt="youtube logo"
-    /></a>
-    <a
-      href="https://www.facebook.com/people/La-Cantarella-Arras/100057565534960/"
-      target="_blank"
-      ><img
-        class="w-8"
-        src="{{ asset('build/images/Facebook_logo.7ef2feb8.png') }}"
-        alt=""
-    /></a>
+<div>
+  <div class="mt-12 ml-12">
+    <h2 class="font-bold pb-8">Nous Contacter</h2>
+    <div class="flex flex-col">
+      <p>N'hésitez pas à nous contacter via notre adresse email !</p>
+      <img
+        class="w-10 pt-2 pb-2"
+        src="{{ asset('build/images/mail_logo.a7850151.png') }}"
+        alt="mail logo"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <p>Vous pouvez aussi nous retrouver sur les réseaux sociaux.</p>
+      <div class="flex items-center pt-2">
+        <a
+          href="https://www.youtube.com/channel/UCtHn2Qg_p7c68ktYtJiVPIA"
+          target="_blank"
+          ><img
+            class="w-8 mr-4"
+            src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+            alt="youtube logo"
+        /></a>
+        <a
+          href="https://www.facebook.com/people/La-Cantarella-Arras/100057565534960/"
+          target="_blank"
+          ><img
+            class="w-8"
+            src="{{ asset('build/images/Facebook_logo.7ef2feb8.png') }}"
+            alt=""
+        /></a>
+      </div>
+    </div>
   </div>
 </div>
 {% include "footer/footer.html.twig" %} {% endblock %}
