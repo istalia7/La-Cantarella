@@ -1,6 +1,28 @@
 {% extends 'base.html.twig' %} {% block title %}Nous Contacter{% endblock %} {%
 block body %} {% include "header/header.html.twig" %}
-<div class="bg-white ml-20 mt-20 w-2/3">
-  <p>Nous Contacter</p>
+<div class="mt-12 ml-12">
+  <h2 class="font-bold pb-8">Nous Contacter</h2>
+  <p>
+    N'hésitez pas à nous contacter via notre adresse email ! <br />
+    Vous pouvez aussi nous retrouver sur les réseaux sociaux.
+  </p>
+  <div class="pt-4 flex items-center">
+    <a
+      href="https://www.youtube.com/channel/UCtHn2Qg_p7c68ktYtJiVPIA"
+      target="_blank"
+      ><img
+        class="w-8 mr-4"
+        src="{{ asset('build/images/Youtube_logo.21516cee.png') }}"
+        alt="youtube logo"
+    /></a>
+    <a
+      href="https://www.facebook.com/people/La-Cantarella-Arras/100057565534960/"
+      target="_blank"
+      ><img
+        class="w-8"
+        src="{{ asset('build/images/Facebook_logo.7ef2feb8.png') }}"
+        alt=""
+    /></a>
+  </div>
 </div>
 {% include "footer/footer.html.twig" %} {% endblock %}

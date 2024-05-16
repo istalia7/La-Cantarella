@@ -25,13 +25,6 @@
             >Nostalgie</a
           >
         </li>
-        {#
-        <li>
-          <a class="text-blue-500" href="{{ path('app_contact') }}"
-            >Nous contacter</a
-          >
-        </li>
-        #}
           <li
             data-dropdown-toggle="dropdown"
             class="text-blue-500 hover:cursor-pointer"
@@ -49,6 +42,9 @@
                 href="{{ path('app_login') }}"
                 >Connexion</a
               >
+            </li>        
+            <li>
+              <a class="text-blue-500 hover:bg-gray-500" href="{{ path('app_register') }}">Inscription</a>
             </li>
             {% if app.user %}
             <li>
