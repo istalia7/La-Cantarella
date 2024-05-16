@@ -29,22 +29,27 @@
             class="text-white hover:cursor-pointer hover:text-[#A1E2E3]"
           >
             Utilisateur
-          </li>
+          </li>  
           <div
             id="dropdown"
             class="hidden divide-black bg-[#15B6B8] border rounded-lg w-44"
           >
           <ul class="py-2 divide-y flex flex-col items-center">
+            {% if not app.user %}
             <li>
               <a
                 class="text-white hover:text-[#A1E2E3]"
                 href="{{ path('app_login') }}"
                 >Connexion</a
               >
-            </li>        
+            </li>     
+            {% endif %} 
+            {% if not app.user %}
+              
             <li>
               <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_register') }}">Inscription</a>
             </li>
+            {% endif %}
             {% if app.user %}
             <li>
               <a

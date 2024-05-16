@@ -6,7 +6,7 @@ body %} {% include "header/header.html.twig" %}
     {{ error.messageKey|trans(error.messageData, 'security') }}
   </div>
   {% endif %} {% if app.user %}
-  <div class="mb-3">
+  <div class="pl-2 bg-green-400">
     Vous êtes connecté en tant que {{ app.user.userIdentifier }},
     <a href="{{ path('app_logout') }}" class="text-blue-500">Se déconnecter</a>
   </div>

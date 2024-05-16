@@ -1,27 +1,24 @@
 {% extends 'base.html.twig' %} {% block title %}Répertoire{% endblock %} {%
 block body %} {% include "header/header.html.twig" %}
-
 <div class="pt-20">
   <div class="flex flex-col items-center">
     <h2 class="text-black font-bold mb-10">Soutenir la Cantarella</h2>
     <p>
       Si vous voulez soutenir la Cantarella ou réservez vos places pour les
-      évènements à venir cela se fera via les boutons ci-dessous qui vous
+      évènements à venir, cela se fera via les boutons ci-dessous qui vous
       redirigeront vers notre page HelloAsso.
     </p>
   </div>
   <div class="flex justify-evenly pt-8">
     <button
-      onclick="window.location.href='https://www.helloasso.com/associations/la-cantarella'"
       id="reserve"
-      class="bg-blue-500 hover:bg-blue-400 rounded-lg h-8 px-2"
+      class="bg-[#689D71] text-white hover:bg-blue-400 rounded-3xl h-10 px-4"
     >
-      Réservez vos places
+      Réservez vos places !
     </button>
     <button
-      onclick="window.location.href='https://www.helloasso.com/associations/la-cantarella/formulaires/1'"
       id="dono"
-      class="bg-blue-500 hover:bg-blue-400 rounded-lg h-8 px-2"
+      class="bg-[#FA8072] text-white hover:bg-blue-400 rounded-3xl h-10 px-4"
     >
       Sountenez-nous !
     </button>

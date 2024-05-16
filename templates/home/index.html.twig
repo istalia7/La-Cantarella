@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block
 body %} {% include "header/header.html.twig" %}
-
+{% if app.user %}
+<h2 class="bg-green-400 text-black">Vous-êtes maintenant connecté !</h2>
+{% endif %}
 <div class="bg-logo">
 <div class="slider relative w-1/2 m-auto overflow-hidden">
   <div class="slides flex justify-center">
