@@ -12,7 +12,8 @@ body %} {% include "header/header.html.twig" %}
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-white"
     >
-      {{ article.titre | raw }}
+      {{ article.titre | raw }} 
+      {# striptags for the ... #}
     </h5>
     <div class="p-5 border-t-2 border-t-gray-950">
       <img class="rounded-t-lg" src="{{ vich_uploader_asset(article) }}" />
