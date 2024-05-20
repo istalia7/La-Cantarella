@@ -1,11 +1,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <header>
-  <div class="flex h-20 bg-[#15B6B8]">
-    <div class="relative w-48 text-center self-center">
+  <div class="flex h-20 bg-[#15B6B8] max-[480px]:block">
+    <div class="navItems relative w-48 text-center self-center">
       <a href="{{ path('app_home') }}"><img class="h-20" src="{{ asset('build/images/cantarella_logo.59344c9a.png') }}"></a>
+      <li id="navbarMenu">
+        <button class="displayMenu text-white border rounded-xl w-14">
+          Menu
+        </button>
+      </li>
     </div>
-    <div class="flex w-full">
-      <ul class="flex items-center justify-between w-full pl-8 pr-16">
+    <div class="navbar flex w-full max-[480px]:h-screen">
+      <ul id="menuItems" class="flex items-center justify-between w-full pl-8 pr-16 max-[480px]:divide-y">
         <li>
           <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_home') }}">Accueil</a>
         </li>
@@ -32,9 +37,9 @@
           </li>  
           <div
             id="dropdown"
-            class="hidden divide-black bg-[#15B6B8] border rounded-lg w-44"
+            class="hidden divide-black bg-[#15B6B8] w-44 border rounded-xl"
           >
-          <ul class="py-2 divide-y flex flex-col items-center">
+          <ul class="py-2 divide-y flex flex-col items-center max-[480px]:border max-[480px]:rounded-xl">
             {% if not app.user %}
             <li>
               <a

@@ -3,13 +3,15 @@ block body %} {% include "header/header.html.twig" %}
 <div class="pt-20">
   <div class="flex flex-col items-center">
     <h2 class="text-black font-bold mb-10">Soutenir la Cantarella</h2>
-    <p>
+    <p class="max-[480px]:ml-2 max-[480px]:pr-2 max-[480px]:text-center">
       Si vous voulez soutenir la Cantarella ou réservez vos places pour les
       évènements à venir, cela se fera via les boutons ci-dessous qui vous
       redirigeront vers notre page HelloAsso.
     </p>
   </div>
-  <div class="flex justify-evenly pt-8">
+  <div
+    class="flex justify-evenly pt-8 max-[480px]:flex-col max-[480px]:items-center max-[480px]:h-48 max-[480px]:pt-0"
+  >
     <button
       id="reserve"
       class="bg-[#689D71] text-white hover:bg-blue-400 rounded-3xl h-10 px-4"
