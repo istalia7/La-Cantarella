@@ -5,3 +5,5 @@ navbuton.addEventListener("click", () => {
   nav.classList.toggle("navbar");
   menu.classList.toggle("displayMenuItems");
 });
+
+

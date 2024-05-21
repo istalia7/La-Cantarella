@@ -2,12 +2,12 @@
 body %} {% include "header/header.html.twig" %} 
 <div class="bg-gray-900">
   <div class="flex justify-center mt-4">
-  <h3 class="rounded-lg shadow border-8 bg-gray-800 border-gray-800 text-white">Actualités et concerts à venir concernant la Cantarella</h3>
+  <h3 class="rounded-lg shadow border-8 bg-gray-800 border-gray-800 text-white mx-2">Actualités et concerts à venir concernant la Cantarella</h3>
 </div>
-<div class="flex justify-around pt-8 mb-8">
+<div class="flex justify-around pt-8 mb-8 max-[480px]:flex-col">
   {% for article in articles %}
   <div
-    class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2"
+    class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2 mx-2 max-[480px]:mb-8"
   >
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-white"

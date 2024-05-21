@@ -4,8 +4,8 @@
     <div class="navItems relative w-48 text-center self-center">
       <a href="{{ path('app_home') }}"><img class="h-20" src="{{ asset('build/images/cantarella_logo.59344c9a.png') }}"></a>
       <li id="navbarMenu">
-        <button class="displayMenu text-white border rounded-xl w-14">
-          Menu
+        <button class="displayMenu text-white font-bold text-4xl">
+          &#8801;
         </button>
       </li>
     </div>
@@ -33,7 +33,7 @@
             data-dropdown-toggle="dropdown"
             class="text-white hover:cursor-pointer hover:text-[#A1E2E3]"
           >
-            Utilisateur
+            Utilisateur 
           </li>  
           <div
             id="dropdown"
@@ -50,9 +50,13 @@
             </li>     
             {% endif %} 
             {% if not app.user %}
-              
             <li>
               <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_register') }}">Inscription</a>
+            </li>
+            {% endif %}
+            {% if is_granted('ROLE_USER') %}
+            <li>
+              <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_file_sharing') }}">Partage de fichiers</a>
             </li>
             {% endif %}
             {% if app.user %}
