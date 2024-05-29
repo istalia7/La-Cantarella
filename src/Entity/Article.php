@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ArticleRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 #[Vich\Uploadable]
+#[ApiResource()]
 class Article
 {
     #[ORM\Id]
@@ -19,12 +21,14 @@ class Article
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $Titre = null;
 
     #[ORM\Column(length: 600, nullable: true)]
     private ?string $resume = null;
 
     #[Vich\UploadableField(mapping: 'article_images', fileNameProperty: 'image', size: 'imageSize')]
+    #[Assert\Image]
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]
@@ -35,6 +39,9 @@ class Article
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    private ?Category $category = null;
 
     public function getId(): ?int
     {
@@ -125,6 +132,18 @@ class Article
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

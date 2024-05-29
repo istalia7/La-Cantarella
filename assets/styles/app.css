@@ -67,10 +67,6 @@ img.displaySlide {
 }
 
 @media screen and (max-width: 480px) {
-  .navbar {
-    display: none;
-  }
-
   #navbarMenu {
     display: block;
   }
@@ -88,9 +84,6 @@ img.displaySlide {
 
   #menuItems {
     transform: translateX(-100vw);
-    animation-name: menuAnimation;
-    animation-duration: 1s;
-    animation-fill-mode: both;
   }
 
   .slider img {
@@ -116,16 +109,10 @@ img.displaySlide {
   }
 }
 
-@keyframes menuAnimationOut {
-  from {
-    transform: translateX(0vw);
-  }
-  to {
-    transform: translateX(-100vw);
-  }
-}
-
 .displayMenuItems {
+  animation-name: menuAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   background-color: #15b6b8;
   display: flex;
   z-index: 1;
