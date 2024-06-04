@@ -20,4 +20,24 @@ class EvenementsController extends AbstractController
             'articles' => $articles,
         ]);
     }
+
+    #[Route('/evenements/affiche', name: 'app_affiche')]
+    public function affiche(ArticleRepository $repository): Response
+    {
+        $articles = $repository->findByCategory(1);
+
+        return $this->render('evenements/affiche.html.twig', [
+            'articles' => $articles,
+        ]);
+    }
+
+    #[Route('/evenements/rubrique', name: 'app_rubrique')]
+    public function rubrique(ArticleRepository $repository): Response
+    {
+        $articles = $repository->findByCategory(2);
+
+        return $this->render('evenements/rubrique.html.twig', [
+            'articles' => $articles,
+        ]);
+    }
 }
