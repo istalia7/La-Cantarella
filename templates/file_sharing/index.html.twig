@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %} {% block title %}Partage de fichiers{% endblock
+%} {% block body %} {% include "header/header.html.twig" %}
+
+<div class="bg-gray-900 h-screen flex items-center justify-center">
+  <div class="flex justify-around pt-8 mb-8">
+    {% for file in files %}
+    <div class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2 mx-2">
+  <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">  {{ file.nomFichier }} </h5>
+    <div class="p-5 border-t-2 border-t-gray-950 text-gray-400">
+    {{ file.lien | raw }}
+    </div>
+    <p class="mb-3 font-normal text-gray-400">
+        <div class="border-t-2 border-t-gray-950 text-gray-400">
+    {{ file.date.format("d/m/Y") }}
+        </div>
+    </p>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% include "footer/footer.html.twig" %} {% endblock %}

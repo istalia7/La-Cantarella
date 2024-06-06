@@ -1,6 +1,67 @@
 {% extends 'base.html.twig' %} {% block title %}L'association{% endblock %} {%
 block body %} {% include "header/header.html.twig" %}
-<div class="bg-white ml-20 mt-20 w-2/3">
-  <p>Qui sommes-nous ?</p>
+
+<h2 class="font-semibold pb-2 pl-4 pt-2">Coralie DEFIEZ TURCKX</h2>
+<div
+  class="flex items-center max-[480px]:block pb-4 max-[480px]:pb-10 font-Trykker"
+>
+  <div>
+    <img
+      class="float-left m-4 h-80"
+      src="{{ asset('build/images/coralie-defiez-turckx.77838c7b.jpg') }}"
+    />
+  </div>
+  <p
+    class="text-justify w-6/12 max-[480px]:w-full max-[480px]:ml-2 max-[480px]:pr-4 max-[480px]:text-start"
+  >
+    Débute le piano au Conservatoire d'Arras à 6 ans, puis le chant à 16 ans.
+    Elle obtient son prix de piano dans la classe d'O. Penven, de musique de
+    chambre dans la classe de F. Bihan, d'analyse et d'écriture dans la classe
+    de F. Zigante au Conservatoire de Roubaix et d'Arras, et se perfectionne en
+    formation musicale au Conservatoire de Boulogne-Billancourt avec A. Le
+    Forestier. Depuis septembre 2015, elle enseigne au Conservatoire de
+    Boulogne-sur-Mer, le chant choral, la formation musicale et accompagne les
+    classes de pratiques vocales collectives. Elle se produit avec diverses
+    formations dans lesquelles elle chante en soliste, dont Le Rossignol
+    d'Alexandre Alabiev, interprété récemment lors d'un concert donné avec
+    l'ensemble vocal du Conservatoire de Boulogne-sur-Mer. Actuellement membre
+    du Quatuor Corda Sacra, ensemble de musique sacrée, elle vient de rejoindre
+    Esclarmonde, trio vocal féminin boulonnais de polyphonies médiévales
+    sacrées. Elle a intégré l'ensemble vocal La Cantarella en tant qu'assistante
+    chef de chœur et pianiste accompagnatrice en septembre 2016.
+  </p>
+</div>
+<h2 class="font-semibold pb-2 pl-4 pt-2">Thomas FLAHAUW</h2>
+<div class="flex items-center max-[480px]:block font-Trykker">
+  <div>
+    <img
+      class="float-right m-4 h-80 max-[480px]:h-72"
+      src="{{ asset('build/images/thomas-flahauw.ed71e96f.jpg') }}"
+    />
+  </div>
+  <p
+    class="text-justify w-8/12 max-[480px]:w-full max-[480px]:ml-2 max-[480px]:pr-8 max-[480px]:text-start"
+  >
+    A étudié le chant et la direction de chœur au Conservatoire de Lille. Membre
+    non permanent du chœur de l'Opéra de Lille, il est amené aussi à travailler
+    dans les chœurs des Opéras de Rouen en collaboration avec l'ensemble «
+    Accentus », Limoges, Dijon ou encore Reims mais aussi avec des ensembles de
+    musique ancienne tel que Akadêmia, direction F. Lasserre. Sur scène, il a
+    interprété les rôles de Nourabaddans Les pêcheurs de Perles et Escamillo
+    dans Carmen de Bizet, Jean dans Les noces de Jeannette de Massé, Ben dans Le
+    Téléphone de Menotti, Nilakantha dans Lakmé de Delibes, le Fauteuil et
+    l'Arbre dans L'enfant et les sortilèges de Ravel, Don Alfonso dans Cosi fan
+    Tutte de Mozart et dernièrement le rôle de Mercutio dans Roméo et Juliette
+    de Gounod ou encore en tant qu'Officier d'état civil dans Madama Butterfly
+    de Puccini sur la scène de l'Opéra de Lille. Il chante régulièrement sous la
+    direction de J.C. Casadesus, J.C. Malgoire, A. Von Beek, N. Chalvin ou
+    encore A. Fogliani et intervient dans des œuvres sacrées telles le Requiem
+    de Faure ou celui de Victoria, Les 7 dernières paroles du Christ de Franck
+    ou encore de MacMillan. Il est actuellement le directeur musical de
+    l'Ensemble Vocal « La Cantarella », chœur symphonique de 70 choristes avec
+    lequel il travaille des œuvres telles que la Missa Grande de M. Portugal, et
+    a comme projet le Magnificat de Rutter ou encore la Sunrise Mass de Ola
+    Gjeilo.
+  </p>
 </div>
 {% include "footer/footer.html.twig" %} {% endblock %}

@@ -1,20 +1,21 @@
 {% extends 'base.html.twig' %} {% block title %}Évenements{% endblock %} {% block
-body %} {% include "header/header.html.twig" %} {% if app.user %}
-<h2 class="bg-green-500 text-black">Vous-êtes maintenant connecté !</h2>
-{% endif %}
-<div class="bg-gray-900">
-  <div class="flex justify-center mt-4">
-  <h3 class="rounded-lg shadow border-8 bg-gray-800 border-gray-800 text-white">Actualités et concerts à venir concernant la Cantarella</h3>
+body %} {% include "header/header.html.twig" %} 
+<div class="bg-gray-900 font-Trykker">
+  <div class="flex justify-center mt-4 pb-4">
+  <h3 class="rounded-lg shadow border-8 bg-gray-800 border-gray-800 text-white mx-2">Actualités et concerts à venir concernant la Cantarella</h3>
 </div>
-<div class="flex justify-around pt-8 mb-8">
+<div class="flex justify-center">
+  <a class="border-gray-800 bg-gray-800 rounded-lg shadow border-8 text-white mx-2 hover:border-gray-700 hover:bg-gray-700" href="{{ path('app_affiche') }}">Trier par affiche</a>
+  <a class="border-gray-800 bg-gray-800 rounded-lg shadow border-8 text-white mx-2 hover:border-gray-700 hover:bg-gray-700" href="{{ path('app_rubrique') }}">Trier par rubrique</a>
+</div>
+<div class="flex justify-around pt-8 mb-8 max-[480px]:flex-col flex-wrap">
   {% for article in articles %}
-  <div
-    class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2"
-  >
+  <div class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2 mx-2 max-[480px]:mb-8 mb-4">
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-white"
     >
-      {{ article.titre | raw }}
+      {{ article.titre | raw }} 
+      {# striptags for the ... #}
     </h5>
     <div class="p-5 border-t-2 border-t-gray-950">
       <img class="rounded-t-lg" src="{{ vich_uploader_asset(article) }}" />

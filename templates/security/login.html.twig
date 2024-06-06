@@ -6,15 +6,15 @@ body %} {% include "header/header.html.twig" %}
     {{ error.messageKey|trans(error.messageData, 'security') }}
   </div>
   {% endif %} {% if app.user %}
-  <div class="mb-3">
+  <div class="pl-2 bg-green-400">
     Vous êtes connecté en tant que {{ app.user.userIdentifier }},
     <a href="{{ path('app_logout') }}" class="text-blue-500">Se déconnecter</a>
   </div>
   {% endif %}
 
-  <section class="bg-gray-900">
+  <section class="bg-gray-900 font-Trykker">
     <div
-      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 max-[480px]:h-screen"
     >
       <div
         class="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700"
@@ -82,4 +82,4 @@ body %} {% include "header/header.html.twig" %}
     </div>
   </section>
 </form>
-{% endblock %}
+{% include "footer/footer.html.twig" %} {% endblock %}
