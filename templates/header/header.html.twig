@@ -2,7 +2,7 @@
 <header>
   <div class="flex h-20 bg-[#15B6B8] max-[480px]:block">
     <div class="navItems relative w-48 text-center self-center">
-      <a href="{{ path('app_home') }}"><img class="h-20" src="{{ asset('build/images/cantarella_logo.59344c9a.png') }}"></a>
+      <a href="{{ path('app_home') }}"><img class="h-20 min-w-24" src="{{ asset('build/images/cantarella_logo.59344c9a.png') }}"></a>
       <li id="navbarMenu">
         <button class="displayMenu text-white font-bold text-4xl">
           &#8801;
@@ -10,7 +10,7 @@
       </li>
     </div>
     <div class="navbar flex w-full max-[480px]:h-screen">
-      <ul id="menuItems" class="flex items-center justify-between w-full pl-8 pr-16 max-[480px]:divide-y">
+      <ul id="menuItems" class="flex items-center justify-between w-full pl-8 pr-16 max-[480px]:divide-y flex-wrap">
         <li>
           <a class="text-white hover:text-[#A1E2E3]" href="{{ path('app_home') }}">Accueil</a>
         </li>

@@ -1,9 +1,9 @@
+// hamburger menu
 let navbuton = document.querySelector(".displayMenu");
-let nav = document.querySelector(".navbar");
+// nav list
 let menu = document.querySelector("#menuItems");
 navbuton.addEventListener("click", () => {
-  nav.classList.toggle("navbar");
+  // add the displayMenuItems class to the menu (ul list)
   menu.classList.toggle("displayMenuItems");
 });
-
 

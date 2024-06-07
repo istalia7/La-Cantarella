@@ -75,16 +75,19 @@ img.displaySlide {
 }
 
 @media screen and (min-width: 480px) {
+  /* Hamburger menu hidden when in desktop mode */
   #navbarMenu {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
+  /* Hamburger menu displayed as block */
   #navbarMenu {
     display: block;
   }
 
+  /* list of my menu items */
   .navItems {
     display: flex;
     align-items: center;
@@ -96,6 +99,7 @@ img.displaySlide {
     padding-top: 10%;
   }
 
+  /* navbar menu out of the screen */
   #menuItems {
     transform: translateX(-100vw);
   }
@@ -114,6 +118,7 @@ img.displaySlide {
   }
 }
 
+/* Animation to slide back in the navbar menu */
 @keyframes menuAnimation {
   from {
     transform: translateX(-100vw);
@@ -123,6 +128,7 @@ img.displaySlide {
   }
 }
 
+/* Class called when the menu hamburger is clicked */
 .displayMenuItems {
   animation-name: menuAnimation;
   animation-duration: 1s;

@@ -24,7 +24,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        Trykker: ["Trykker", "sans-serif"],
+        Trykker: ["Trykker"],
+        PostNoBills: ["PostNoBills"],
         body: [
           "Inter",
           "ui-sans-serif",

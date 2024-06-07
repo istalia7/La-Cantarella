@@ -8,7 +8,7 @@ body %} {% include "header/header.html.twig" %}
     <a class="border-gray-800 bg-gray-800 rounded-lg shadow border-8 text-white mx-2 hover:border-gray-700 hover:bg-gray-700" href="{{ path('app_evenements') }}">Tout afficher</a>
     <a class="border-gray-800 bg-gray-800 rounded-lg shadow border-8 text-white mx-2 hover:border-gray-700 hover:bg-gray-700" href="{{ path('app_rubrique') }}">Trier par rubrique</a>
   </div>
-<div class="flex justify-around pt-8 mb-8 max-[480px]:flex-col flex-wrap">
+<div class="flex justify-around pt-8 mb-8 max-[480px]:flex-col flex-wrap items-center">
   {% for article in articles %}
   <div class="max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-2 mx-2 max-[480px]:mb-8 mb-4">
     <h5
